@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('Webdesign.png');
+    background-size: cover;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 2.5rem;
+    color: rgba(71, 80, 109, 0.838);
+    font-style: bold;
+    font-family: Arial, sans-serif;
+    text-decoration: underline;
+    letter-spacing: 5px;
+    line-height: 2;
+    text-shadow: 3px -2px rgb(136, 229, 231);
+    /* 
+        1 rem = 16px;
+        1.5 rem = 24px (1.5 * 16)
+    */
+    position: static;
+    margin-top: 1rem;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: #25c617;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #f63c42;
+    color:white;
+    font-style: 2rem;
+    padding: 2rem;
+}
+
+
+/* Styling the container of our todo list */
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the list og todo items */
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+    display: grid;
+}
+
+/* Styling for the list og todo items */
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+/* Styling the trash and check icons */
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+/* styling the dropdown filter */
+.filter-todo {
+    padding: 0.5rem;
+    font-size: 2rem;
+    width: 18rem;
+}
+
+/* styling for the list items within the todo list */
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, .complete-btn {
+    background: #f63c42;
+    color: rgb(14, 12, 12);
+    border: solid;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 2rem;    
+}
+
+.complete-btn {
+    background-color: #70d36f;
+    border-style: solid;
+}
+
+/* Styling the completed items */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+/* animaation for removing completed items */
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/* styling the custom dropdown */
+/* custom selector */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+}
+
+/* styling the custom select dropdown container */
+/* custom select */
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* style the custom select dropdown */
+select {
+    color: #5147d4;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 12rem;
+}
+
+/* styling the custom select dropdown arrow */
+.select::after {
+    content:"\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background: #0dd9d9f3;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.fixed{
+    position: fixed;
+    padding-right: 50px;
+    bottom: 20px;
+    color: rgb(167, 240, 208);
+    font-size: 1.2rem;
+    font-style: italic;
+    text-indent: 450px;
+    letter-spacing: 2px;
+}
+  
